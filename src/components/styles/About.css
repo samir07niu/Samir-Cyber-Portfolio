@@ -9,25 +9,35 @@
   width: var(--cWidth);
   margin: auto;
 }
+
 .about-me {
   padding: 50px 0px;
   padding-bottom: 0;
   width: 500px;
   max-width: calc(100% - 15px);
 }
+
 .about-me h3 {
   font-size: 25px;
   text-transform: uppercase;
   letter-spacing: 7px;
   font-weight: 400;
   color: var(--accentColor);
+  margin-bottom: 15px; /* Title ke neeche ka gap thoda kam kiya */
 }
 
-.about-me p {
-  font-size: 33px;
-  font-weight: 600;
-  line-height: 36px;
-  letter-spacing: 1px;
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me p.cyber-text {
+  font-size: 18px; /* 🔥 Font thoda normal kiya */
+  font-weight: 500;
+  line-height: 1.5; /* 🔥 Lines ke beech ka space balance kiya */
+  letter-spacing: 0.8px;
+  margin-bottom: 14px; /* 🔥 Har paragraph ke baad sirf itna sa hi space aayega */
+  color: #eaeaea; 
 }
 
 @media only screen and (min-width: 600px) {
@@ -35,6 +45,7 @@
     justify-content: center;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .about-me {
     width: 500px;
@@ -45,6 +56,7 @@
     opacity: 1;
   }
 }
+
 @media only screen and (min-width: 1025px) {
   .about-section {
     width: var(--cWidth);
@@ -58,14 +70,153 @@
     padding: 0px;
     width: 50%;
   }
-  .about-me p {
-    font-size: 1.9vw;
-    line-height: 2.3vw;
+  .about-me p.cyber-text {
+    font-size: 1.3vw; /* 🔥 Desktop par font ko screen gherne se rokne ke liye */
+    line-height: 2vw;
   }
 }
+
 @media only screen and (min-width: 1950px) {
-  .about-me p {
-    font-size: 2.5rem;
-    line-height: 2.7rem;
+  .about-me p.cyber-text {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  }
+}
+
+/* --- NAYE PROFILE CARD KI CSS --- */
+.profile-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px; /* Text ke thoda niche aayega */
+  position: relative;
+  z-index: 10;
+}
+
+.profile-card {
+  display: flex;
+  background: rgba(10, 10, 10, 0.7);
+  border: 1px solid rgba(0, 242, 255, 0.2);
+  border-radius: 6px;
+  width: 800px;
+  max-width: 100%;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 242, 255, 0.1);
+  transition: all 0.4s ease;
+}
+
+.profile-card:hover {
+  border-color: rgba(0, 242, 255, 0.5);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 242, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.profile-photo-wrapper {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-right: 30px;
+  flex-shrink: 0;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.2); /* Hacker style B&W look */
+  transition: all 0.5s ease;
+}
+
+.profile-card:hover .profile-photo {
+  filter: grayscale(0%) contrast(1); /* Hover karne par normal color aayega */
+}
+
+.photo-scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 242, 255, 0) 50%, rgba(0, 242, 255, 0.1) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+.profile-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.status-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+}
+
+.dot.online {
+  width: 8px;
+  height: 8px;
+  background-color: #00ff41; /* Matrix green */
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00ff41;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.status-text {
+  color: #fff;
+  font-weight: 700;
+}
+
+.terminal-body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.terminal-body p {
+  margin: 0; /* Faltu gap hatane ke liye */
+}
+
+.label {
+  color: #00f2ff;
+  font-weight: bold;
+}
+
+.alias-tag {
+  color: #00ff41 !important;
+  font-weight: bold;
+  margin-top: 15px !important;
+  font-size: 14px;
+}
+
+/* Mobile ke liye */
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+  }
+  .profile-photo-wrapper {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }

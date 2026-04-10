@@ -1,107 +1,91 @@
 export const config = {
     developer: {
-        name: "Huzaif",
-        fullName: "Huzaif Ahmed",
-        title: "Full Stack Developer",
-        description: "Full-stack builder creating digital experiences that respect humans and scale with clarity. Accessibility is my north star."
+        name: "Samir",
+        fullName: "Samir Raja",
+        title: "Cyber Security & OSINT Tool Developer",
+        description: "Cyber Security enthusiast specializing in OSINT, Network Forensics, and Python Automation. Creator of NetWatch OSINT Suite and advanced Telegram-based security tools."
     },
     social: {
-        github: "huzaifahmedz",
-        email: "dev.huzaif@gmail.com",
+        github: "https://github.com/samir07niu",
+        email: "samircyber0007@gmail.com",
         location: "India"
     },
     about: {
         title: "About Me",
-        description: "Full-stack builder creating digital experiences that respect humans and scale with clarity. Accessibility is my north star. I specialize in building modern web applications with React, Node.js, and cutting-edge technologies."
+        description: `Hi, I am Samir, a BCA student at Noida International University. I have a strong passion for Cyber Security, Ethical Hacking, and OSINT (Cyber07). I actively build real-world tools like NetWatch OSINT Suite, Panther OS Shafiyabad Sharif Smart Village Portal, and Project Ghost-Calc. My focus is on automation, digital forensics, and vulnerability analysis to solve real-world cyber problems.`
     },
     experiences: [
         {
-            position: "Frontend Developer",
-            company: "SelectSkillSet",
-            period: "2024 - Present",
-            location: "Remote",
-            description: "Developing modern, responsive frontend applications with focus on user experience and performance. Working with cutting-edge technologies to build scalable web solutions.",
+            position: "Cybersecurity & IT Tech Sales Intern",
+            company: "CYBETHIX",
+            period: "Mar 2026 - Present",
+            location: "Gurugram, India (Remote)",
+            description: "Worked on Cyber Threat Awareness, OSINT investigations, and assisted in VAPT projects under industry experts. Mentored in live projects focusing on advanced cyber security concepts.",
             responsibilities: [
-                "Building responsive and interactive user interfaces using React and Next.js",
-                "Implementing modern UI/UX designs with TailwindCSS and Framer Motion",
-                "Optimizing application performance and ensuring cross-browser compatibility",
-                "Collaborating with design and backend teams to deliver high-quality features"
+                "Performed OSINT-based investigations and data analysis",
+                "Assisted in Vulnerability Assessment and Penetration Testing (VAPT)",
+                "Worked on cyber threat awareness campaigns",
+                "Supported security consulting tasks and tool development"
             ],
-            technologies: ["React", "Next.js", "TailwindCSS", "JavaScript", "Framer Motion", "TypeScript"]
-        },
-        {
-            position: "Full Stack Developer",
-            company: "Tekisky",
-            period: "2023 - 2024",
-            location: "Remote",
-            description: "Developed and maintained full-stack web applications, working on both frontend and backend systems. Collaborated with cross-functional teams to deliver robust software solutions.",
-            responsibilities: [
-                "Developed and maintained full-stack web applications using React, Node.js, and MongoDB",
-                "Implemented RESTful APIs and integrated third-party services",
-                "Built responsive user interfaces and optimized application performance",
-                "Worked on database design and backend architecture"
-            ],
-            technologies: ["React", "Node.js", "MongoDB", "Express", "JavaScript", "MERN Stack"]
+            technologies: ["OSINT", "VAPT", "Networking", "Cyber Security", "Python"]
         }
     ],
     projects: [
         {
             id: 1,
-            title: "AI-Powered Code Review Assistant",
-            category: "Full Stack",
-            technologies: "Python, TensorFlow, React, FastAPI, PostgreSQL, Docker",
+            title: "NetWatch OSINT Suite",
+            category: "Cyber Security",
+            technologies: "Python, OSINT, Digital Forensics, Selenium, Data Recovery",
             image: "/images/project-1.webp"
         },
         {
             id: 2,
-            title: "Real-time Collaborative Whiteboard",
-            category: "Full Stack",
-            technologies: "TypeScript, WebRTC, Socket.io, Canvas API, Node.js, Redis",
+            title: "Shafiyabad Portal (Panther.OS)",
+            category: "Smart Village & OSINT Hub",
+            technologies: "TypeScript, Node.js, Three.js, React, Python, OSINT",
             image: "/images/project-2.webp"
         },
         {
             id: 3,
-            title: "Blockchain Voting System",
-            category: "Full Stack",
-            technologies: "Solidity, Web3.js, React, Ethereum, IPFS, MetaMask",
+            title: "Project Ghost-Calc",
+            category: "Stealth Application",
+            technologies: "Python, Cryptography, Stealth Communication",
             image: "/images/project-3.webp"
         },
         {
             id: 4,
-            title: "Cloud Infrastructure Dashboard",
-            category: "Full Stack",
-            technologies: "Go, Kubernetes, Grafana, Prometheus, Terraform, React",
+            title: "Net-Admin v1.2",
+            category: "Network Security",
+            technologies: "Python, Socket Programming, TCP-UDP, LAN-WAN",
             image: "/images/project-4.webp"
         },
         {
             id: 5,
-            title: "Neural Network Visualizer",
-            category: "Full Stack",
-            technologies: "Python, TensorFlow.js, D3.js, Next.js, WebGL, TypeScript",
+            title: "Payload-Recon",
+            category: "Vulnerability Scanner",
+            technologies: "Python, Requests, Automation, Security Analysis",
             image: "/images/project-5.webp"
         }
     ],
     contact: {
-        email: "dev.huzaif@gmail.com",
-        github: "https://github.com/huzaifahmedz",
-        linkedin: "https://www.linkedin.com",
-        twitter: "https://x.com",
-        instagram: "https://www.instagram.com"
+        email: "samircyber0007@gmail.com",
+        github: "https://github.com/samir07niu",
+        linkedin: "https://www.linkedin.com/in/samir-raja-269078392/",
+        twitter: "https://x.com/samir_cyber0007",
+        instagram: "https://www.instagram.com/samir.cyber07/"
     },
     skills: {
         develop: {
-            title: "DEVELOP",
-            description: "Full-stack development with modern web technologies",
-            details: "Building scalable web applications using React, Node.js, and cutting-edge frameworks. Specializing in creating responsive, performant, and accessible user interfaces.",
-            tools: ["JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Express.js", "MongoDB", "TailwindCSS", "Framer Motion", "Three.js"]
+            title: "CYBER SECURITY",
+            description: "Security analysis, OSINT, and ethical hacking",
+            details: "Focused on open-source intelligence, vulnerability assessment, penetration testing, and network forensics. Building tools to solve real-world cyber problems.",
+            tools: ["Kali Linux", "Nmap", "Burp Suite", "Metasploit", "Wireshark", "OSINT Frameworks"]
         },
         design: {
-            title: "DESIGN",
-            description: "UI/UX design and modern web interfaces",
-            details: "Creating beautiful and intuitive user experiences with focus on accessibility and user-centered design principles.",
-            tools: ["UI Design", "UX Design", "Figma", "Photoshop", "Motion Design", "Responsive Design", "Accessibility", "Prototyping"]
+            title: "AUTOMATION & DEV",
+            description: "Building security tools and bots",
+            details: "Developing advanced automation tools, stealth chat applications, Telegram bots, and forensic systems using programming languages.",
+            tools: ["Python", "C", "Flask", "FastAPI", "Telegram API", "Socket Programming"]
         }
     }
 };
-
-

@@ -12,15 +12,17 @@ import {
 } from "@react-three/rapier";
 
 const textureLoader = new THREE.TextureLoader();
+
+// 🔥 YAHAN TERA CYBER SECURITY TECH STACK UPDATE KIYA HAI
 const imageUrls = [
-  "/images/react2.webp",
-  "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
-  "/images/typescript.webp",
-  "/images/javascript.webp",
+  "/images/python.webp",
+  "/images/kali.webp",
+  "/images/nmap.webp",
+  "/images/wireshark.webp",
+  "/images/c-lang.webp",
+  "/images/metasploit.webp",
+  "/images/linux.webp",
+  "/images/bash.webp",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
@@ -168,7 +170,7 @@ const TechStack = () => {
 
   return (
     <div className="techstack">
-      <h2> My Techstack</h2>
+      <h2>My Arsenal & Tools</h2> {/* 🔥 Heading thodi cool kar di */}
 
       <Canvas
         shadows
