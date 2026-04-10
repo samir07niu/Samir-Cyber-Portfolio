@@ -12,7 +12,6 @@ const Navbar = () => {
   const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // 1. Lenis Smooth Scroll Initialize
     lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -24,7 +23,7 @@ const Navbar = () => {
       infinite: false,
     });
 
-    lenis.stop(); // Initial stop for loading
+    lenis.stop();
 
     function raf(time: number) {
       lenis?.raf(time);
@@ -32,7 +31,6 @@ const Navbar = () => {
     }
     requestAnimationFrame(raf);
 
-    // 2. Navigation Links Handling (Smooth Scroll to section)
     let links = document.querySelectorAll(".nav-links-slim a");
     links.forEach((elem) => {
       let element = elem as HTMLAnchorElement;
@@ -50,7 +48,6 @@ const Navbar = () => {
       });
     });
 
-    // 3. Navbar Appearance on Scroll (Glassmorphism effect)
     ScrollTrigger.create({
       start: "top -20",
       onEnter: () => {
@@ -101,20 +98,35 @@ const Navbar = () => {
             </li>
           </ul>
 
-          {/* WhatsApp Button */}
-          <a 
-            href="https://wa.me/19415048891?text=Hi%20Samir,%20I%20saw%20your%20portfolio%20and%20wanted%20to%20connect!" 
-            target="_blank" 
-            rel="noreferrer" 
-            className="nav-whatsapp-btn"
-            data-cursor="disable"
-          >
-            WHATSAPP
-          </a>
+          {/* Right Side Actions Container */}
+          <div className="nav-actions-right">
+            
+            {/* Direct Panther OS / Smart Village Button */}
+            <a 
+              href="https://shafiyabad-portal.vercel.app/" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="nav-system-btn"
+              data-cursor="disable"
+            >
+              <span className="sys-dot"></span> PANTHER.OS
+            </a>
+
+            {/* WhatsApp Button */}
+            <a 
+              href="https://wa.me/19415048891?text=Hi%20Samir,%20I%20saw%20your%20portfolio%20and%20wanted%20to%20connect!" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="nav-whatsapp-btn"
+              data-cursor="disable"
+            >
+              WHATSAPP
+            </a>
+          </div>
+          
         </div>
       </nav>
 
-      {/* Background gradients jo purane code mein the */}
       <div className="landing-circle1"></div>
       <div className="landing-circle2"></div>
       <div className="nav-fade"></div>

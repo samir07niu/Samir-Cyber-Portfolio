@@ -53,6 +53,50 @@
   color: #fff;
 }
 
+/* Container for right side buttons (Panther + WhatsApp) */
+.nav-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* PANTHER.OS Direct Button */
+.nav-system-btn {
+  background: transparent;
+  color: #00f2ff;
+  border: 1px solid rgba(0, 242, 255, 0.3);
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-system-btn:hover {
+  background: rgba(0, 242, 255, 0.1);
+  border-color: #00f2ff;
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+}
+
+.sys-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #00ff41; /* Matrix green indicator */
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00ff41;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
 /* WhatsApp Button Styling */
 .nav-whatsapp-btn {
   font-size: 10px;
@@ -114,7 +158,8 @@
 
 /* Mobile Responsive */
 @media (max-width: 1024px) {
-  .nav-whatsapp-btn, .nav-links-slim { 
+  /* Mobile par dono buttons aur beech ke links hide ho jayenge, sirf logo center me rahega */
+  .nav-actions-right, .nav-links-slim { 
     display: none; 
   }
   .nav-container-slim { 
